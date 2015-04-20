@@ -69,7 +69,7 @@ int driver(const char *input_file, const char *output_file)
 
 int main(int argc, char **argv)
 {
-	if(argc != 2) {
+	if(argc != 3) {
 		printf("Usage: %s input.txt output.txt\n", argv[0]);
 		return 0;
 	}

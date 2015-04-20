@@ -5,5 +5,5 @@
 
 for i in `seq 6`
 do
-	./driver ../sample/$i/input.txt
+	./driver ./sample/$i/input.txt  output/$i
 done 
