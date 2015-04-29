@@ -1,6 +1,5 @@
 #ifndef _COMMON_H_
 #define _COMMON_H_
-/* common.h */
 
 // 一个case的解
 typedef struct sudoku_res {
@@ -10,4 +9,4 @@ typedef struct sudoku_res {
 }SUDOKU_RES;
 
 
-#endif /* _COMMON_H_ */
+#endif 

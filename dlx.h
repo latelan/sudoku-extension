@@ -9,7 +9,6 @@ inline void addrow(const int& i,const int& j,const int& k);
 int need_addrow(const int& i,const int& j,const int& k);
 void addrow_opt(const int& i,const int& j,const int& k,const int& is_known);
 void build();
-int h(const int& c,const int& k_max);
 int get_score(const char (&s)[82]);
 bool Dance_opt(const int& k);
 inline void get_max_score();

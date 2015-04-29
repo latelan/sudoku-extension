@@ -39,7 +39,6 @@ void output_to_cmd(const SUDOKU_RES (&result)[101], const int &result_cnt)
 
 		if(result[k].score == 0){
 			printf("impossible\n");
-			printf("---\n");
 		} else {
 			printf("%d\n", result[k].score);
 			for(int i=0; i<9; i++) {
@@ -48,7 +47,7 @@ void output_to_cmd(const SUDOKU_RES (&result)[101], const int &result_cnt)
 				}   
 				printf("\n");
 			}   
-			printf("---\n");
 		}
+		printf("---\n");
 	}
 }

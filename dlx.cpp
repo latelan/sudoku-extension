@@ -49,6 +49,7 @@ int a_k[9];		// 可供选择的数字
 // for test
 int num = 0;
 int times;      // Dance调用次数
+
 /**
  * 初始化DL
  */
@@ -368,45 +369,7 @@ int get_nodes_sum()
 
 	return sum;
 }
-/**
- * 找到一个性价比最好的未知格子n
- * 并计算可供填写的数字放在a_k
- * a_k[i] = 1,表示可填i
- */
-int get_valualbe_blank()
-{
-	int n = 0;
-	int i,j;
-	for(i=0; i<9; i++){
-		if(map[gird[i]] == '0'){
-			n = gird[i];
-			break;
-		}
-	}
 
-	int x = n/9;
-	int y = n%9;
-	for(i=0; i<9; i++){
-		if(map[x*9+i]>= '1' && map[x*9+i]<='9'){
-			a_k[map[x*9+i]-'1'] = -1;
-		}
-		if(map[y+i*9]>='1' && map[y+i*9]<='9'){
-			a_k[map[y+i*9]-'1'] = -1;
-		}
-	}
-	int xi = x/3*3;
-	int yi = y%3*3;
-	int sti = xi*9+yi;
-	for(i=0; i<3; i++){
-		for(j=0; j<3; j++){
-			if(map[sti+i*9+j] >= '1' && map[sti+i*9+j] <= '9'){
-				a_k[map[sti+i*9+j]-'1'] = -1;
-			}
-		}
-	}
-
-	return n;
-}
 /**
  * 求解接口
  * @param map_orign - 待解数独矩阵
